@@ -1,6 +1,6 @@
 public class kadane {
 
-    public static void KadaneSum(int nums[]){
+    public static void KadaneAlgo(int nums[]){
 
         int max_sum = Integer.MIN_VALUE;
         int curr_sum = 0;
@@ -24,7 +24,7 @@ public class kadane {
     public static void main(String[] args) {
 
         int nums[] = {-2,-3,4,-1,-2,1,5,-3};
-        KadaneSum(nums);
+        KadaneAlgo(nums);
         
     }
     

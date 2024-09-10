@@ -21,7 +21,7 @@ public class ArrayReverce {
 
         Reverce(numbers);
 
-        System.out.println("Reverce Number is ");
+        System.out.println("Reverce Number is are as follows ");
 
         for(int i=0;i<numbers.length;i++){
             System.out.print(numbers[i] + " ");

@@ -2,17 +2,22 @@ public class Stock {
 
     public static int Maxprofit(int stocks[]){
 
-        int MaxProfit = 0;
+       int buyprice = Integer.MAX_VALUE;
+       int Maxprofit = 0;
 
-        for(int i =0;i<stocks.length;i++){
-            MaxProfit = stocks[i+1]-stocks[i];
-        }
-
-        if(MaxProfit>0){
-            return MaxProfit;
+       for(int i=0;i<stocks.length;i++){
+        if(buyprice<stocks[i]){
+            int profit = stocks[i] - buyprice;
+            Maxprofit = Math.max(Maxprofit, profit);
         }else{
-            return 0;
+            buyprice = stocks[i];
         }
+       }
+
+
+       return Maxprofit;
+
+       
     }
 
     public static void main(String[] args) {

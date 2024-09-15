@@ -5,9 +5,9 @@ public class sortbubble {
         for(int turn=0;turn<nums.length-1;turn++){
             for(int j=0;j<nums.length-1-turn;j++){
                 if(nums[j]>nums[j+1]){
-                    int temp = nums[j];
+                    int var = nums[j];
                     nums[j] = nums[j+1];
-                    nums[j+1] = temp;
+                    nums[j+1] = var;
                 }
             }
         }

@@ -23,7 +23,7 @@ public class ReverceArray {
             System.out.print(numbers[i] +" ");
         }
 
-        System.out.println();
+        
     }
     
 }

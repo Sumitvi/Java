@@ -13,7 +13,7 @@ class Animal   {
 
 
     Animal(){
-        System.out.println("Constructor Called");
+        System.out.println("Non Parameterized Constructor");
     }
     String name = "Harry";
 

@@ -19,8 +19,8 @@ public class OopConcepts {
 
       System.out.println(Acc1.UserName);
      
-      Acc1.setPass("abcd");
-     
+      System.out.println(Acc1.setPass(12333));
+          
 
 
 
@@ -35,12 +35,12 @@ public class OopConcepts {
 
 class BankAccount{
      public String UserName = "SumitVishwakarma";
-     private String PassWord ;
+     private int PassWord ;
 
 
-     public void setPass(String newPass){
+     public int setPass(int newPass){
           PassWord = newPass;
-          System.out.println(PassWord);
+          return PassWord;
      }
 
 }

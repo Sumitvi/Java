@@ -15,12 +15,35 @@ public class OopConcepts {
       System.out.println(s1.Percentage);
 
 
+      BankAccount Acc1 = new BankAccount();
+
+      System.out.println(Acc1.UserName);
+     
+      Acc1.setPass("abcd");
+     
+
+
+
 
 
 
      }
 }
 
+
+
+
+class BankAccount{
+     public String UserName = "SumitVishwakarma";
+     private String PassWord ;
+
+
+     public void setPass(String newPass){
+          PassWord = newPass;
+          System.out.println(PassWord);
+     }
+
+}
 
 class Pen{
       String Color;

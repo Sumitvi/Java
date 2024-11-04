@@ -46,11 +46,11 @@ class BankAccount{
 }
 
 class Pen{
-      String Color;
+      String Color = "Red";
       int Tip ;
 
-     void setColor(String NewColor){
-      Color = NewColor;
+     String setColor(String NewColor){
+        return this.Color;
      }
 
 

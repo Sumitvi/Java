@@ -19,6 +19,10 @@ public class abstructclass {
 
 abstract class Animal{
 
+    Animal(){
+        System.out.println("Constructor Call...!!");
+    }
+
     void eat(){
         System.out.println("Eating...!!");
     }

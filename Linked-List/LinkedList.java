@@ -12,6 +12,7 @@ public class LinkedList{
     
     public static Node head;
     public static Node Tail;
+    public static int size;
 
 
     public void addFirst(int data){
@@ -19,6 +20,7 @@ public class LinkedList{
         // When we have one or more node
          // create new node
          Node NewNode = new Node(data);
+         size++;
 
 
         // when we have not any node
@@ -40,6 +42,8 @@ public class LinkedList{
 
     public void addLast(int data){
         Node newNode = new Node(data);
+        size++;
+
 
         if(head==null){
             head = Tail = newNode;
@@ -61,6 +65,41 @@ public class LinkedList{
         System.out.println("null");
     }
 
+
+    public void add(int idx , int data){
+        Node newNode = new Node(data);
+        size++;
+
+        Node temp = head;
+        int i=0;
+
+        while(i<idx-1){
+            temp = temp.next;
+            i++;
+        }
+
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+
+
+    public int removeFirst(){
+
+        if(size == 0){
+            System.out.println("LL is Empty");
+        }else if(size== 1){
+            int val = head.data;
+            head = Tail = null;
+            return val;
+        }
+
+
+        int val = head.data;
+        head = head.next;
+        return val;
+    }
+
+    
    
 
 
@@ -78,6 +117,14 @@ public class LinkedList{
         ll.print();
 
         ll.addLast(4);
+        ll.print();
+
+        ll.add(2 , 5);
+        ll.print();
+
+        // System.out.println(ll.size);
+
+        ll.removeFirst();
         ll.print();
 
 

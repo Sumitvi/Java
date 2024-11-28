@@ -99,7 +99,67 @@ public class LinkedList{
         return val;
     }
 
-    
+
+    public int iterativeSearch(int key){
+
+        Node temp = head;
+        int i=0;
+
+        while(temp!=null){
+            if(temp.data==key){
+                return i;
+            }
+
+            temp = temp.next;
+            i++;
+        }
+
+        return -1;
+    }
+
+
+    public int helper(Node head , int key){
+
+        if(head==null){
+            return -1;
+
+        }
+
+        if(head.data == key){
+            return 0;
+        }
+
+        int idx = helper(head.next, key);
+
+        if(idx==-1){
+            return -1;
+        }
+
+        return idx+1;
+    }
+
+
+    public int recSearch(int key){
+       return  helper(head, key);
+
+    }
+
+
+    public void reverce(){
+        Node prev = null;
+        Node curr = head;
+        Node next;
+
+        while(curr!=null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        head = prev;
+    }
+
    
 
 
@@ -125,6 +185,16 @@ public class LinkedList{
         // System.out.println(ll.size);
 
         ll.removeFirst();
+        ll.print();
+
+        System.out.println(ll.iterativeSearch(2));
+        System.out.println(ll.iterativeSearch(3));
+
+
+        ll.recSearch(3);
+        ll.print();
+        
+        ll.reverce();
         ll.print();
 
 
